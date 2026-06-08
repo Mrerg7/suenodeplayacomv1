@@ -1,0 +1,63 @@
+---
+import { ACQUISITION_MAILTO, CF_IMAGES, cfImageUrl } from '../config/site';
+
+const heroBg = cfImageUrl(CF_IMAGES.heroImageId);
+const secondaryBg = cfImageUrl(CF_IMAGES.secondaryImageId);
+---
+
+<section
+  class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden hero-image"
+  style="background-image: url('{heroBg}');"
+>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-zinc-950/90 via-zinc-950/70 to-zinc-950" aria-hidden="true"></div>
+
+  <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+    <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-3xl bg-white/5 border border-white/10 backdrop-blur mb-6">
+      <div class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+      <span class="text-xs font-medium tracking-[1.5px] text-cyan-400">PREMIUM .COM DOMAIN • STRATEGIC ACQUISITION</span>
+    </div>
+
+    <h1 class="font-display text-[3.25rem] md:text-[5rem] leading-[0.95] tracking-[-0.055em] mb-4">
+      <span class="text-white">SuenoDePlaya</span><span class="monster-gradient">.com</span>
+    </h1>
+
+    <p class="max-w-2xl mx-auto text-2xl md:text-3xl font-medium tracking-tight text-zinc-300 mb-2">
+      Your Beach Dream Awaits
+    </p>
+    <p class="max-w-xl mx-auto text-lg text-zinc-400 mb-10">
+      The definitive .com for beach lifestyle brands, dream vacation platforms, coastal real estate, and luxury travel destinations.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+      <a
+        href={ACQUISITION_MAILTO}
+        class="group w-full sm:w-auto inline-flex items-center justify-center gap-x-3 px-9 py-4 text-lg font-semibold rounded-3xl bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:brightness-110 active:scale-[0.985] transition-all shadow-xl shadow-cyan-500/20"
+      >
+        <span>Inquire About Acquisition</span>
+        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+      </a>
+      <a
+        href="#why"
+        class="w-full sm:w-auto inline-flex items-center justify-center gap-x-2 px-8 py-4 text-lg font-medium rounded-3xl border border-white/20 hover:bg-white/5 backdrop-blur transition-all"
+      >
+        <span>Explore the opportunity</span>
+      </a>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-zinc-400">
+      <div class="flex items-center gap-x-2">
+        <i class="fa-solid fa-check text-cyan-400"></i>
+        <span>Instant brand recognition</span>
+      </div>
+      <div class="flex items-center gap-x-2">
+        <i class="fa-solid fa-check text-cyan-400"></i>
+        <span>Beach lifestyle equity</span>
+      </div>
+      <div class="flex items-center gap-x-2">
+        <i class="fa-solid fa-check text-cyan-400"></i>
+        <span>Global travel appeal</span>
+      </div>
+    </div>
+  </div>
+</section>
