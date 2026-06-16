@@ -6,15 +6,19 @@ interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
+  canonicalPath?: string;
 }
 
 const {
   title = SITE.title,
   description = SITE.description,
   ogImage = OG_IMAGE,
+  canonicalPath,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, SITE.url);
+const canonicalURL = canonicalPath
+  ? new URL(canonicalPath, SITE.url)
+  : new URL(Astro.url.pathname, SITE.url);
 const publishedDate = '2026-06-08';
 
 const structuredData = {
@@ -167,6 +171,7 @@ const structuredData = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <slot name="head" />
   </head>
   <body>
     <slot />
