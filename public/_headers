@@ -4,6 +4,9 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
+/
+  Link: <https://suenodeplaya.com/>; rel="canonical"
+
 /index.html
   X-Robots-Tag: noindex
 
